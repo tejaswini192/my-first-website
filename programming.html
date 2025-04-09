@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Languages Overview</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: #212121;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        header img {
+            width: 50px;
+            vertical-align: middle;
+            margin-right: 15px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+        .sidebar {
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #2c3e50;
+            padding-top: 50px;
+            height: 100%;
+            box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+            color: white;
+            font-size: 18px;
+        }
+
+        .sidebar a {
+            padding: 15px;
+            text-decoration: none;
+            color: white;
+            display: block;
+            transition: 0.3s;
+            border-bottom: 1px solid #34495e;
+        }
+
+        .sidebar a:hover {
+            background-color: #ff7f50;
+        }
+        .sidebar a img {
+            width: 20px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        .main-content {
+            margin-left: 270px;
+            padding: 30px;
+        }
+
+        .main-content h2 {
+            color: #2c3e50;
+        }
+
+        .content {
+            display: none;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        .content h3 {
+            color: #3498db;
+            font-size: 28px;
+            margin-top: 0;
+        }
+
+        footer {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 50px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Programming Languages Overview</h1>
+    </header>
+
+    <div class="sidebar">
+        <a href="#" onclick="showContent('home')">
+        Home
+        </a>
+        <a href="#" onclick="showContent('about-us')">
+         About Us
+        </a>
+        <a href="#" onclick="showContent('python')">
+         Python
+        </a>
+        <a href="#" onclick="showContent('javascript')">
+        JavaScript
+        </a>
+        <a href="#" onclick="showContent('java')"> 
+        Java
+        </a>
+        <a href="#" onclick="showContent('cpp')">
+        C++
+        </a>
+        <a href="#" onclick="showContent('project-info')">
+        Project Info
+        </a>
+    </div>
+
+    <div class="main-content">
+        <div id="home" class="content active">
+		        <img src="sample.jpeg" alt="Logo" width="600" height="100">
+
+            <h2>Welcome to Programming Languages Overview</h2>
+            <p>Explore a collection of the most popular programming languages used today. Understand their features and discover their real-world applications. Learn, code, and grow your programming skills!</p>
+        </div>
+
+        <div id="about-us" class="content">
+            <h2>About Us</h2>
+            <p>We are a team of passionate developers, educators, and technology enthusiasts. Our goal is to share knowledge and provide a platform for learning programming languages, helping individuals grow in their careers and technical expertise.</p>
+        </div>
+
+        <div id="python" class="content">
+            <h3>Python</h3>
+            <p>Python is a general-purpose, high-level programming language. It's known for its simplicity and readability, making it popular for web development, data science, automation, and more.</p>
+        </div>
+
+        <div id="javascript" class="content">
+            <h3>JavaScript</h3>
+            <p>JavaScript is a dynamic language primarily used in front-end web development, but with the advent of Node.js, it is also widely used in back-end development.</p>
+        </div>
+
+        <div id="java" class="content">
+            <h3>Java</h3>
+            <p>Java is a class-based, object-oriented programming language commonly used in enterprise applications, Android development, and large-scale systems.</p>
+        </div>
+
+        <div id="cpp" class="content">
+            <h3>C++</h3>
+            <p>C++ is an extension of C that allows for object-oriented programming. It's widely used in game development, high-performance applications, and systems programming.</p>
+        </div>
+
+        <div id="project-info" class="content">
+            <h2>Project Information</h2>
+            <p>This project aims to provide an overview of the most commonly used programming languages today. We have compiled information to help developers and learners understand the strengths, uses, and unique features of each language. The goal is to make this resource an educational tool for those exploring different languages or looking to expand their programming knowledge.</p>
+        </div>
+    </div>
+    <script>
+        function showContent(contentId) {
+            var contents = document.querySelectorAll('.content');
+            contents.forEach(function(content) {
+                content.classList.remove('active');
+            });
+
+            var selectedContent = document.getElementById(contentId);
+            selectedContent.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
